@@ -69,7 +69,9 @@ def mergesort(array, counter = Counter()):
     return merge(mergesort(arr1, counter), mergesort(arr2, counter), counter)
 
 c = Counter()
-result3 = mergesort([1,5,2, 0, 3], c)
+
+f = [int(x) for x in open("/Users/10gen/Downloads/IntegerArray.txt", 'r').read().split("\r\n")[:-1]]
+result3 = mergesort(f, c)
 
 print(c.count())
 
